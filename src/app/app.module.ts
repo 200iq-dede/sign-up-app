@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserCreateComponent } from './components/user-create/user-create.component';
 import { DragDropFileUploadDirective } from './directive/drag-drop-file-upload.directive';
 import { DragDropComponent } from './components/drag-drop/drag-drop.component';
+import { ThankYouComponent } from './components/thank-you/thank-you.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { DragDropComponent } from './components/drag-drop/drag-drop.component';
     UserCreateComponent,
     DragDropFileUploadDirective,
     DragDropComponent,
+    ThankYouComponent,
   ],
   imports: [
     BrowserModule,

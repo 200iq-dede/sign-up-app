@@ -22,7 +22,11 @@
             (click)="fileField.click()"
             (fileDropped)="upload($event)"
           >
-            <span class="ddinfo">Choose a file or drag here</span>
+            <span class="ddinfo">
+              Drag and drop to upload <br />
+              or Browse
+            </span>
+            <span class="ddinfo">or Browse</span>
             <input
               type="file"
               name="avatars"

@@ -47,10 +47,10 @@ export class UserCreateComponent implements OnInit {
       return this.apiService.createUser(this.userForm.value).subscribe({
         complete: () => {
           console.log('user successfully created!'),
-            this.ngZone.run(() =>
+            this.ngZone.run(() => {
               console.log("Show Successful message")
-            //  this.router.navigateByUrl('/users-list')
-            );
+              this.router.navigateByUrl('/thank-you')
+            });
             // Need to update here
         },
         error: (e) => {

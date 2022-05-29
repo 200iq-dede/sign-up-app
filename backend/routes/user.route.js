@@ -17,7 +17,7 @@ userRoute.route('/create').post((req, res, next) => {
 })
 
 // Get All User
-userRoute.route('/').get((req, res) => {
+userRoute.route('/thank-you').get((req, res) => {
   User.find((error, data) => {
     if (error) {
       return next(error)

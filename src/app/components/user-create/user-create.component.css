@@ -1,0 +1,15 @@
+.btn-custom-bg {
+    background: #BA55D3;
+}
+
+.btn-custom-text-color {
+    color: #BA55D3;
+}
+
+.btn-custom-primary {
+    color: #fff;
+    background: #BA55D3;
+}
+.btn-custom-radius {
+    border-radius: 40px 40px;
+}

@@ -25,7 +25,10 @@ export class UserCreateComponent implements OnInit {
         Validators.required,
         Validators.pattern('^[a-zA-Z ]*$')
       ]],
-      phoneNumber: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
+      phoneNumber: ['', [
+        Validators.required, 
+        Validators.pattern('^[0-9]+$')
+      ]],
       email: [
         '',
         [

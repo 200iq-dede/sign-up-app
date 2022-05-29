@@ -16,29 +16,19 @@
                 !myForm['name'].errors?.['pattern'] 
                 && myForm['name'].invalid 
                 && (myForm['name'].dirty || myForm['name'].touched)
+                && myForm['name'].errors?.['required']
               "
             >
-              Enter user name.
+              User name is required.
             </div>
             <div
               class="invalid-feedback"
               *ngIf="myForm['name'].errors?.['pattern']"
             >
-              Enter Alphabet only
+              User name should be alphabet only.
             </div>
           </div>
 
-          <div class="form-group">
-            <input class="form-control custom-input btn-custom-radius" type="text" formControlName="email" placeholder="Email" required/>
-            <!-- error -->
-            <div
-              class="invalid-feedback"
-              *ngIf= "myForm['email']&& myForm['email'].errors?.['pattern']"
-            >
-              Enter valid email.
-            </div>
-          </div>
-          
           <div class="form-group">
             <input
               class="form-control custom-input btn-custom-radius"
@@ -50,15 +40,31 @@
             <!-- error -->
             <div
               class="invalid-feedback"
-              *ngIf="myForm['phoneNumber'] && (myForm['phoneNumber'].dirty || myForm['phoneNumber'].touched)&&myForm['phoneNumber'].errors?.['required']"
+              *ngIf="
+                !myForm['phoneNumber'].errors?.['pattern']
+                && myForm['phoneNumber'] 
+                && (myForm['phoneNumber'].dirty || myForm['phoneNumber'].touched)
+                && myForm['phoneNumber'].errors?.['required']
+              "
             >
-              Enter your phone number.
+              Phone number is required.
             </div>
             <div
               class="invalid-feedback"
               *ngIf="myForm['phoneNumber'].errors?.['pattern']"
             >
-              Enter Numbers Only
+              User name should be number only.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input class="form-control custom-input btn-custom-radius" type="text" formControlName="email" placeholder="Email" required/>
+            <!-- error -->
+            <div
+              class="invalid-feedback"
+              *ngIf= "myForm['email']&& myForm['email'].errors?.['pattern']"
+            >
+              Enter valid email.
             </div>
           </div>
           

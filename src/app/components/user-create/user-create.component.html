@@ -2,14 +2,13 @@
     <div class="col-md-4 register-user">
       <!-- form card register -->
       <div class="text-center">
-        <p class="fs-1 btn-custom-text-color">Sign Up</p>
+        <p class="fs-2 custom-text-color">Sign Up</p>
         <p class="fs-6">Fill in the form with correct informations</p>
       </div>
       <div class="card-body">
         <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
-            <label for="inputName">User Name</label>
-            <input class="form-control btn-custom-radius" type="text" formControlName="name" />
+            <input class="form-control custom-input btn-custom-radius" type="text" formControlName="name" placeholder="User Number"/>
             <!-- error -->
             <div
               class="invalid-feedback"
@@ -19,8 +18,7 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="inputEmail3">Email</label>
-            <input class="form-control btn-custom-radius" type="text" formControlName="email" />
+            <input class="form-control custom-input btn-custom-radius" type="text" formControlName="email" placeholder="Email"/>
             <!-- error -->
             <div
               class="invalid-feedback"
@@ -37,11 +35,11 @@
           </div>
           
           <div class="form-group">
-            <label for="inputVerify3">Mobile No</label>
             <input
-              class="form-control btn-custom-radius"
+              class="form-control custom-input btn-custom-radius"
               type="text"
               formControlName="phoneNumber"
+              placeholder="Phone Number"
             />
             <!-- error -->
             <div
@@ -59,11 +57,11 @@
           </div>
 
           <div class="form-group">
-            <label for="inputVerify3">Card Number</label>
             <input
-              class="form-control btn-custom-radius"
+              class="form-control custom-input btn-custom-radius"
               type="text"
               formControlName="cardNumber"
+              placeholder="Card Number"
             />
             <!-- error -->
             <div
@@ -82,7 +80,7 @@
           
           <app-drag-drop></app-drag-drop>
 
-          <div class="form-group">
+          <div class="form-group d-grid gap-2 text-center">
             <button class="btn btn-custom-primary btn-custom-radius" type="submit">
               Create account
             </button>

@@ -1,15 +1,24 @@
-.btn-custom-bg {
-    background: #BA55D3;
+.register-user {
+    margin: 60px;
 }
 
-.btn-custom-text-color {
+.custom-text-color {
     color: #BA55D3;
+}
+
+.custom-input {
+    padding: 10px 10px;
+    background: #F4F5F5;
+    border: none;
+    margin: 20px;
 }
 
 .btn-custom-primary {
     color: #fff;
     background: #BA55D3;
+    padding: 10px;
 }
+
 .btn-custom-radius {
     border-radius: 40px 40px;
 }

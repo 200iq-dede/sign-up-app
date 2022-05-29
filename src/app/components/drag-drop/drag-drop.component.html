@@ -1,8 +1,11 @@
 <div class="container fileUploadWrapper">
     <form [formGroup]="form">
+      <div class="text-center fw-bold">
+        <p class="custom-text-color ">Upload your ID</p>
+      </div>
       <div class="row">
         <!-- Progress Bar -->
-        <div class="col-md-12" *ngIf="progress">
+        <!-- <div class="col-md-12" *ngIf="progress">
           <div class="progress form-group">
             <div
               class="progress-bar progress-bar-striped bg-success"
@@ -11,6 +14,7 @@
             ></div>
           </div>
         </div>
+         -->
         <div class="col-md-12">
           <div
             class="fileupload"

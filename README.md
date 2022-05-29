@@ -2,9 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## How to run the app?
+- Run `npm install` to install required dependencies.
+- Run `ng serve` to run the angular app
+- Start the MEAN Stack backend
+  - `cd backend` to enter into the backend folder
+  - `nodemon server` to start the nodemon server
+  - `mongod` to start the mongoDB shell
 
 ## Code scaffolding
 

@@ -27,7 +27,23 @@ export class ApiService {
     return this.http.get(`${this.baseUri}`);
   }
 
+  // Upload file
+  addFiles(files: any) {
+    let arr: any[] | { [x: string]: string | Blob; }[] = [];
+    let url = `${this.baseUri}/create-file`;
 
+    let formData = new FormData();
+    arr.push(files);
+    arr[0].forEach((item: any, i: string | number) => {
+      formData.append('avatar', arr[0][i]);
+    })
+    return this.http.post(url, formData, {
+      reportProgress: true,
+      observe: 'events'
+    }).pipe(
+      catchError(this.errorMgmt)
+    )
+  }
   // Error handling
   errorMgmt(error: HttpErrorResponse) {
     let errorMessage = '';

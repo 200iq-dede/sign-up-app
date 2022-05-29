@@ -10,7 +10,6 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class UserCreateComponent implements OnInit {
   submitted = false;
   userForm!: FormGroup;
-  userProfile: any = ['Finance', 'BDM', 'HR', 'Sales', 'Admin'];
   constructor(
     public fb: FormBuilder,
     private router: Router,
@@ -32,7 +31,7 @@ export class UserCreateComponent implements OnInit {
         ],
       ],
       cardNumber: ['', [Validators.required]],
-      file: ['', [Validators.required]],
+      file: ['', []],
     });
   }
 

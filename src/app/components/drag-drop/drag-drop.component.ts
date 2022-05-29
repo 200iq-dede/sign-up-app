@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DragdropService } from "../../service/drag-drop.service";
+import { ApiService } from "../../service/api.service";
 import { FormBuilder, FormGroup, FormArray } from "@angular/forms";
 import { HttpEvent, HttpEventType } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -20,7 +20,7 @@ export class DragDropComponent implements OnInit {
   constructor(
     public fb: FormBuilder,
     private sanitizer: DomSanitizer,
-    public dragdropService: DragdropService
+    public apiService: ApiService
   ) {
     this.form = this.fb.group({
       avatar: [null]
@@ -44,7 +44,7 @@ export class DragDropComponent implements OnInit {
     })
     this.form.get('avatar').updateValueAndValidity()
     // Upload to server
-    this.dragdropService.addFiles(this.form.value.avatar)
+    this.apiService.addFiles(this.form.value.avatar)
       .subscribe((event: HttpEvent<any>) => {
         switch (event.type) {
           case HttpEventType.Sent:

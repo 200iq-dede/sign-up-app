@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { userCreateComponent } from './components/user-create/user-create.component';
+
+const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'create-user' },
+  { path: 'create-user', component: userCreateComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

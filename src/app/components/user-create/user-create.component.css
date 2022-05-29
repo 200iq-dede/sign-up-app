@@ -75,3 +75,9 @@
   .round input[type="checkbox"]:checked + label:after {
      opacity: 1;
   }
+
+  .invalid-feedback{
+    color: #ff606e;
+    display: block;
+  }
+  

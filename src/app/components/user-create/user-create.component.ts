@@ -39,6 +39,11 @@ export class UserCreateComponent implements OnInit {
   get myForm() {
     return this.userForm.controls;
   }
+
+  get userFormControl() {
+    return this.userForm.controls;
+  }
+  
   onSubmit() {
     this.submitted = true;
     if (!this.userForm.valid) {

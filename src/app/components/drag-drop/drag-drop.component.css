@@ -18,11 +18,11 @@ body {
     background-repeat: no-repeat;
     background-size: 100px;
     background-position: center;
-    background-color: #ffffff;
+    background: #F4F5F5;
     height: 200px;
     width: 100%;
     cursor: pointer;
-    /* border: 2px dashed #0f68ff; */
+    border: 2px dashed gray;
     border-radius: 6px;
     margin-bottom: 25px;
     background-position: center 28px;

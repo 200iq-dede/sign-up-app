@@ -17,7 +17,7 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   // Create
-  createuser(data): Observable<any> {
+  createUser(data: any): Observable<any> {
     let url = `${this.baseUri}/create`;
     return this.http.post(url, data).pipe(catchError(this.errorMgmt));
   }

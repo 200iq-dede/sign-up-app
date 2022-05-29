@@ -2,7 +2,7 @@
     <div class="col-md-4 register-user">
       <!-- form card register -->
       <div class="card-body">
-        <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
             <label for="inputName">Name</label>
             <input class="form-control" type="text" formControlName="name" />
@@ -14,7 +14,6 @@
               Name is required.
             </div>
           </div>
-  
           <div class="form-group">
             <label for="inputEmail3">Email</label>
             <input class="form-control" type="text" formControlName="email" />
@@ -32,31 +31,7 @@
               Enter valid email.
             </div>
           </div>
-  
-          <div class="form-group">
-            <label for="inputPassword3">cardNumber</label>
-            <select
-              class="custom-select form-control"
-              (change)="updateProfile($event.target.value)"
-              formControlName="cardNumber"
-            >
-              <option value="">Choose...</option>
-              <option
-                *ngFor="let userProfile of userProfile"
-                value="{{ userProfile }}"
-              >
-                {{ userProfile }}
-              </option>
-            </select>
-            <!-- error -->
-            <div
-              class="invalid-feedback"
-              *ngIf="submitted && myForm['cardNumber'].errors?.['required']"
-            >
-              Choose cardNumber.
-            </div>
-          </div>
-  
+          
           <div class="form-group">
             <label for="inputVerify3">Mobile No</label>
             <input
@@ -78,7 +53,51 @@
               Enter Numbers Only
             </div>
           </div>
-  
+
+          <div class="form-group">
+            <label for="inputVerify3">Card Number</label>
+            <input
+              class="form-control"
+              type="text"
+              formControlName="cardNumber"
+            />
+            <!-- error -->
+            <div
+              class="invalid-feedback"
+              *ngIf="submitted && myForm['cardNumber'].errors?.['required']"
+            >
+              Enter your card number.
+            </div>
+            <div
+              class="invalid-feedback"
+              *ngIf="submitted && myForm['cardNumber'].errors?.['pattern']"
+            >
+              Enter Numbers Only
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="inputVerify3">File</label>
+            <input
+              class="form-control"
+              type="text"
+              formControlName="file"
+            />
+            <!-- error -->
+            <div
+              class="invalid-feedback"
+              *ngIf="submitted && myForm['file'].errors?.['required']"
+            >
+              Upload file
+            </div>
+            <div
+              class="invalid-feedback"
+              *ngIf="submitted && myForm['file'].errors?.['pattern']"
+            >
+              Enter Numbers Only
+            </div>
+          </div>
+
           <div class="form-group">
             <button class="btn btn-success btn-lg btn-block" type="submit">
               Register
@@ -89,4 +108,3 @@
     </div>
     <!-- form card register -->
   </div>
-  

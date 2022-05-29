@@ -3,14 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { userCreateComponent } from './components/user-create/user-create.component';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { UserCreateComponent } from './components/user-create/user-create.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    userCreateComponent
+    UserCreateComponent,
   ],
   imports: [
     BrowserModule,

@@ -22,3 +22,8 @@
 .btn-custom-radius {
     border-radius: 40px 40px;
 }
+
+::placeholder {
+    padding-left: 10px;
+    font-style: italic;
+}

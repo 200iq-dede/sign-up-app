@@ -1,6 +1,6 @@
 # SignUpApp
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
+This project is MEAN Stack signing up. 
+It is built with Angular, MongoDB, NodeJs and Express JS.
 
 ## How to run the app?
 - Run `npm install` to install required dependencies.
@@ -9,10 +9,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   - `cd backend` to enter into the backend folder
   - `nodemon server` to start the nodemon server
   - `mongod` to start the mongoDB shell
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
@@ -26,6 +22,3 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

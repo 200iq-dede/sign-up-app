@@ -7,11 +7,15 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UserCreateComponent } from './components/user-create/user-create.component';
+import { DragDropFileUploadDirective } from './directive/drag-drop-file-upload.directive';
+import { DragDropComponent } from './components/drag-drop/drag-drop.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserCreateComponent,
+    DragDropFileUploadDirective,
+    DragDropComponent,
   ],
   imports: [
     BrowserModule,

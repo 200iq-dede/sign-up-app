@@ -3,5 +3,5 @@ export class User {
     phoneNumber!: number;
     email!: string;
     cardNumber!: string;
-    file!: string;
+    file!: any;
 }

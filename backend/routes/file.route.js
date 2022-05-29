@@ -27,7 +27,6 @@ var upload = multer({
     }
   }
 });
-
 // File model
 let File = require('../models/File');
 router.post('/create-file', upload.array('avatar', 6), (req, res, next) => {
@@ -56,7 +55,6 @@ router.post('/create-file', upload.array('avatar', 6), (req, res, next) => {
       });
   })
 })
-
 router.get("/", (req, res, next) => {
   File.find().then(data => {
     res.status(200).json({

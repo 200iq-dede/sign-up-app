@@ -7,14 +7,15 @@ import { HttpErrorResponse, HttpClient } from '@angular/common/http';
 })
 export class DragdropService {
   constructor(private http: HttpClient) { }
-  addFiles(images: File) {
-    var arr: File[] | { [x: string]: string | Blob; }[] = []
-    var formData = new FormData();
+  addFiles(images: any) {
+    let arr: any[] | { [x: string]: string | Blob; }[] = [];
+    const URL: string = 'http://localhost:4000/create-file';
+    let formData = new FormData();
     arr.push(images);
     arr[0].forEach((item: any, i: string | number) => {
       formData.append('avatar', arr[0][i]);
     })
-    return this.http.post('http://localhost:4000/api/create-user', formData, {
+    return this.http.post(URL, formData, {
       reportProgress: true,
       observe: 'events'
     }).pipe(

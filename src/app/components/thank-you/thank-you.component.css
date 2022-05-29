@@ -7,7 +7,7 @@
 }
 
 .success-icon {
-    background-image: url("./assets/upload-icon.png");
+    /* background-image: url("./assets/upload-icon.png"); */
     background-repeat: no-repeat;
     background-size: 100px;
     background-position: center;

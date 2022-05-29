@@ -18,20 +18,12 @@
             </div>
           </div>
 
-          
-
           <div class="form-group">
             <input class="form-control custom-input btn-custom-radius" type="text" formControlName="email" placeholder="Email" required/>
             <!-- error -->
             <div
               class="invalid-feedback"
               *ngIf= "myForm['email']&& myForm['email'].errors?.['pattern']"
-            >
-              Enter your email.
-            </div>
-            <div
-              class="invalid-feedback"
-              *ngIf="submitted && myForm['email'].errors?.['pattern']"
             >
               Enter valid email.
             </div>
@@ -54,7 +46,7 @@
             </div>
             <div
               class="invalid-feedback"
-              *ngIf="submitted && myForm['phoneNumber'].errors?.['pattern']"
+              *ngIf="myForm['phoneNumber'].errors?.['pattern']"
             >
               Enter Numbers Only
             </div>
@@ -77,7 +69,7 @@
             </div>
             <div
               class="invalid-feedback"
-              *ngIf="submitted && myForm['cardNumber'].errors?.['pattern']"
+              *ngIf="myForm['cardNumber'].errors?.['pattern']"
             >
               Enter Numbers Only
             </div>

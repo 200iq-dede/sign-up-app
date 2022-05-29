@@ -36,7 +36,7 @@ export class UserCreateComponent implements OnInit {
   }
 
   // Getter to access form control
-  get myForm() {
+  get userForm() {
     return this.userForm.controls;
   }
   onSubmit() {

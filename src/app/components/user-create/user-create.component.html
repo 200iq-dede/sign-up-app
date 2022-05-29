@@ -67,19 +67,25 @@
               Enter valid email.
             </div>
           </div>
-          
+
           <div class="form-group">
             <input
               class="form-control custom-input btn-custom-radius"
               type="text"
               formControlName="cardNumber"
-              placeholder="Card Number"
+              placeholder="**** - **** - **** - 1234"
+              required
+              (focusout)="cardHide($event)"
+              maxlength="16"
               required
             />
             <!-- error -->
             <div
               class="invalid-feedback"
-              *ngIf="myForm['cardNumber'].errors?.['required']"
+              *ngIf="
+                myForm['cardNumber'].errors?.['pattern']
+                && myForm['cardNumber'].errors?.['required']
+              "
             >
               Enter your card number.
             </div>

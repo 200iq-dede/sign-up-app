@@ -10,6 +10,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class UserCreateComponent implements OnInit {
   submitted = false;
   userForm!: FormGroup;
+
   constructor(
     public fb: FormBuilder,
     private router: Router,
@@ -36,9 +37,21 @@ export class UserCreateComponent implements OnInit {
           Validators.pattern("^[a-z0-9._%-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"),
         ],
       ],
-      cardNumber: ['', [Validators.required]],
+      cardNumber: ['', 
+        [
+          Validators.required,
+          Validators.pattern(''),
+        ]],
       file: ['', []],
     });
+  }
+
+  cardHide(event: any) {
+    let card = `${event.target.value}`;
+    let trimNumber = card.substr(card.length - 4);
+    let format = '**** - ';
+    let hideNumber = `${format.repeat(3)}${trimNumber}`;
+    this.myForm['cardNumber'].setValue(hideNumber);
   }
 
   // Getter to access form control

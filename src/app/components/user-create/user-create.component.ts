@@ -10,6 +10,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class UserCreateComponent implements OnInit {
   submitted = false;
   userForm!: FormGroup;
+  cardNumber = '';
 
   constructor(
     public fb: FormBuilder,
@@ -40,7 +41,6 @@ export class UserCreateComponent implements OnInit {
       cardNumber: ['', 
         [
           Validators.required,
-          Validators.pattern(''),
         ]],
       file: ['', []],
     });
@@ -48,10 +48,14 @@ export class UserCreateComponent implements OnInit {
 
   cardHide(event: any) {
     let card = `${event.target.value}`;
-    let trimNumber = card.substr(card.length - 4);
+    this.cardNumber = card;
+    let strCount = card.length
+    let trimNumber = card.substr(strCount - 4);
     let format = '**** - ';
     let hideNumber = `${format.repeat(3)}${trimNumber}`;
-    this.myForm['cardNumber'].setValue(hideNumber);
+    if (card && strCount == 16){
+      this.myForm['cardNumber'].setValue(hideNumber);
+    }
   }
 
   // Getter to access form control
@@ -65,9 +69,13 @@ export class UserCreateComponent implements OnInit {
   
   onSubmit() {
     this.submitted = true;
-    if (!this.userForm.valid) {
-      return false;
-    } else {
+    console.log(this.myForm);
+    if (
+      this.myForm['name']
+      && this.myForm['phoneNumber']
+      && this.myForm['email']
+      && this.cardNumber
+    ) {
       return this.apiService.createUser(this.userForm.value).subscribe({
         complete: () => {
           console.log('user successfully created!'),
@@ -81,6 +89,8 @@ export class UserCreateComponent implements OnInit {
           console.log(e);
         },
       });
+    } else {
+      return false;
     }
   }
 }

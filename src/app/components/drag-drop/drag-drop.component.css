@@ -13,8 +13,8 @@ body {
 .progress {
     margin-bottom: 30px;
 }
-.fileupload {
-    /* background-image: url("./assets/success-icon.png"); */
+.fileupload-icon {
+    background-image: url('./../../../assets/upload-icon.png');
     background-repeat: no-repeat;
     background-size: 100px;
     background-position: center;

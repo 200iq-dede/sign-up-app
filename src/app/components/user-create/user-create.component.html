@@ -83,17 +83,12 @@
             <div
               class="invalid-feedback"
               *ngIf="
-                myForm['cardNumber'].errors?.['pattern']
+                myForm['cardNumber'] 
+                && (myForm['cardNumber'].dirty || myForm['cardNumber'].touched)
                 && myForm['cardNumber'].errors?.['required']
               "
             >
-              Enter your card number.
-            </div>
-            <div
-              class="invalid-feedback"
-              *ngIf="myForm['cardNumber'].errors?.['pattern']"
-            >
-              Enter Numbers Only
+              Enter your valid card number.
             </div>
           </div>
           
